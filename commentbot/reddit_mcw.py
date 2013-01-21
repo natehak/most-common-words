@@ -84,7 +84,9 @@ def mcw():
 				</form>
 				
 				Warning, will take a long time to load. Do NOT try to refresh page.
-				A tool by <a href="http://www.reddit.com/user/drkabob">Nathan.</a>"""
+				A tool by <a href="http://www.reddit.com/user/drkabob">Nathan.</a>
+				Are good with HTML and CSS? Can you make websites pretty? <a href="mailto:nathan@welcometonathan.com">Contact me</a> if you're interested in making this less ugly. <br />
+				Find the code on GitHub <a href="https://github.com/drkabob/most-common-words"> here!</a>"""
 	else:
 		results = get_top_words(link, top=int(request.query.top))
 		
