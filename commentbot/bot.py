@@ -6,7 +6,7 @@
 import praw, sys
 
 # Before we do anything, we need to grab a list of the most common words to ignore
-with open("commonwords.txt", "r") as words:¬
+with open("commonwords.txt", "r") as words:
 	commonwords = [word.lower().rstrip() for word in words]
 
 r = praw.Reddit(user_agent="PRAW Most Common Word Bot. By /u/drkabob")
