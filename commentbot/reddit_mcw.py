@@ -100,4 +100,4 @@ def mcw():
 		return toreturn
 		
 # Run the web server!
-run(server="twisted")
+run(server="cherrypy", port=80)
