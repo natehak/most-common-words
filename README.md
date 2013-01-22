@@ -29,7 +29,8 @@ And for `reddit_mcw.py`, you will need...
 * [bottle](http://bottlepy.org/)
 * [CherryPy](http://www.cherrypy.org/)
 
-Additions to this Fork
+UI Overhaul
 -----------------
-In this fork, the following changes have been made from the main repository:
-* HTML Re-Design, allowing the actual user-end display to look much nicer
+The UI Overhaul was done by [Samuel Thacker](http://www.samuelthacker.me) or [h4xg33k](http://www.github.com/h4xg33k/).
+
+Designed in Bootstrap, coding integrated into Python.
