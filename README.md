@@ -28,3 +28,8 @@ For both `bot.py` and `reddit_mcw.py`, you will need...
 And for `reddit_mcw.py`, you will need...
 * [bottle](http://bottlepy.org/)
 * [CherryPy](http://www.cherrypy.org/)
+
+Additions to this Fork
+-----------------
+In this fork, the following changes have been made from the main repository:
+* HTML Re-Design, allowing the actual user-end display to look much nicer
