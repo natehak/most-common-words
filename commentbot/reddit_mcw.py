@@ -81,23 +81,29 @@ def mcw():
 						<input type="submit" value="Calculate">
 				</form>
 				
-				Warning, will take a long time to load. Do NOT try to refresh page.
-				A tool by <a href="http://www.reddit.com/user/drkabob">Nathan.</a>
+				Warning, will take a long time to load. Do NOT try to refresh page. <br />
+				A tool by <a href="http://www.reddit.com/user/drkabob">Nathan.</a> <br />
 				Are good with HTML and CSS? Can you make websites pretty? <a href="mailto:nathan@welcometonathan.com">Contact me</a> if you're interested in making this less ugly. <br />
 				Find the code on GitHub <a href="https://github.com/drkabob/most-common-words"> here!</a>"""
 	else:
-		results = get_top_words(link, top=int(request.query.top))
-		
-		toreturn = """<title>Most Common Words for Reddit comment threads</title>
-					<h3>Most common words for comment thread given</h3>
-					"""
-		i = 1
-		for result in results:
-			toreturn = toreturn + str(i) + ") " + result + " - " + str(results[result])+ "<br />"
-			i += 1
-			
-		toreturn = toreturn + """<br /><br /><FORM METHOD="LINK" ACTION="mcw"> <INPUT TYPE="submit" VALUE="Back"> </FORM>"""
-		return toreturn
+		if not link.lstrip("http://").lstrip("https://").lstrip("www.").startswith("reddit.com"):
+			return """Error, invalid URL given. Go back and try again? <br /><br /><FORM METHOD="LINK" ACTION="mcw"> <INPUT TYPE="submit" VALUE="Back"> </FORM>"""
+		else:
+			try:
+				results = get_top_words(link, top=int(request.query.top))
+				
+				toreturn = """<title>Most Common Words for Reddit comment threads</title>
+							<h3>Most common words for comment thread given</h3>
+							"""
+				i = 1
+				for result in results:
+					toreturn = toreturn + str(i) + ") " + result + " - " + str(results[result]) + "<br />"
+					i += 1
+					
+				toreturn = toreturn + """<br /><br /><FORM METHOD="LINK" ACTION="mcw"> <INPUT TYPE="submit" VALUE="Back"> </FORM>"""
+				return toreturn
+			except:
+				return """Error occurred. Go back and try again?<br /><br /><FORM METHOD="LINK" ACTION="mcw"> <INPUT TYPE="submit" VALUE="Back"> </FORM>"""
 		
 # Run the web server!
 run(server="cherrypy", port=80)
