@@ -28,3 +28,9 @@ For both `bot.py` and `reddit_mcw.py`, you will need...
 And for `reddit_mcw.py`, you will need...
 * [bottle](http://bottlepy.org/)
 * [CherryPy](http://www.cherrypy.org/)
+
+UI Overhaul
+-----------------
+The UI Overhaul was done by [Samuel Thacker](http://www.samuelthacker.me) or [h4xg33k](http://www.github.com/h4xg33k/).
+
+Designed in Bootstrap, coding integrated into Python.
