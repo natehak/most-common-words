@@ -18,11 +18,11 @@ a lot less interesting. It is required that this file be in the directory where 
 
 Prerequisites
 -----------------
-Both `bot.py` and `reddit_mcw.py` are designed to work with Python 3.x. They will work with Python 2.x, but you will encounter
+Both `bot.py` and `reddit_mcw.py` are designed to work with `Python 3.x`. They will work with Python 2.x, but you will encounter
 Unicode errors.
 
 For both `bot.py` and `reddit_mcw.py`, you will need...
-* A Python interpreter, preferably Python 3.x
+* A Python interpreter, preferably `Python 3.x`
 * The latest version of [praw](https://github.com/praw-dev/praw)
 
 And for `reddit_mcw.py`, you will need...
